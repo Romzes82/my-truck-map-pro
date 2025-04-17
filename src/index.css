@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-size: 14px;
+}
+
+.App {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.conteiner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: hsl(0 0% 50% / 10%);
+  border: 4px solid hsl(0 0% 50% / 40%);
+  z-index: 1;
+}
+
+.side_left {
+  /* min-width: auto; */
+  /* background: hsl(26, 25%, 76%); */
+  overflow-y: scroll;
+  height: 100%;
+  flex: 15;
+  padding: 2px;
+}
+
+.side {
+  /* background: hsl(0deg 0% 77.01%); */
+  background:  #000000;
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.center_side {
+  /* display: flex; */
+  flex-direction: column;
+  position: relative;
+  border: 1px solid a0a0a0;
+  flex: 70;
+  width: 100%; 
+  background-color: #fff;
+  padding: 3px;
+}
+
+.header_center_side {
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    min-height: 2.2rem;
+    align-items: center;
+    padding: 0rem 1rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+    height: 5%;
+    border: 1px solid black;
+}
+
+.side_right {
+  /* min-width: auto; */
+  /* background: hsl(26, 25%, 76%); */
+  overflow-y: scroll;
+  height: 100%;
+  flex: 15;
+  padding: 3px;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
+}
+
+#customMap {
+  height: 93vh;
+}
+
+.truck {
+  justify-self: end;
+  cursor: pointer;
+  padding-top: 0.3rem;
+}
+
+.trucks-list {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 2px;
+  box-shadow:  0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);;
+  z-index: 1;
+  animation: show 500ms ease-in-out;
+
+}
+
+.trucks-list-close {
+  cursor: pointer;
+  position: absolute;  
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #26a69a;
+}
+
+.trucks-list-save {
+  cursor: pointer;
+  position: absolute;   
+  top: 0.5rem;
+  left: 0.5rem;
+  /* color: red; */
+}
+
+.trucks-list-save:hover {
+  color: red;
+}
+
+.truck-delete {
+   cursor: pointer;
+}
+
+.calculator {
+  font-weight: 600;
+  color: #a0a0a0;
+   /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+}
+
+ul li:hover {
+  background-color: #414141;
+/* text-decoration: underline; */
+/* font-weight: bold; */
+}
+
+ul li:focus {
+  background-color: #414141;
+/* text-decoration: underline; */
+/* font-weight: bold; */
+}
+
+.trucks-list-scroll {
+    max-height: 30vh;
+    background-color: #aaa;
+    overflow-y: scroll;
+    /* border-bottom: 1px solid #e0e0e0; */
+}
+
+.collection-header-title {
+  /* display: flex; */
+  /* align-items: flex-start; */
+  /* color: #FFF; */
+  /* font-family: 'Fira Sans Condensed', sans-serif; */
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  color: #000
+}
+
+.side_title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;    
+  margin: 0.4rem 0 0.4rem 0;
+}
+
+.side .side_title {
+  color: #26a69a
+}
+
+/* .side_right .side_title {
+  color: #26a69a
+} */
+
+.collection-item {
+  color: #000000
+}
+
+.collection.with-header .collection-header {
+    padding: 0px 20px;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+}
+
+.collection .collection-item:last-child {
+     border-bottom: 1px solid #e0e0e0;
+}
