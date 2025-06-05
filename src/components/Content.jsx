@@ -9,6 +9,9 @@ import RightSide from './RightSide';
 
 const Content = (props) => {
   const { data } = props;
+  if (data.length === 0) return;
+  
+    console.log(data.length);
   return (
       <main className="conteiner">
           <LeftSide data={data} />
