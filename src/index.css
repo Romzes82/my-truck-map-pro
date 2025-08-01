@@ -144,14 +144,15 @@ ul li:hover {
 }
 
 ul li:focus {
-  background-color: #414141;
+  background-color: #56db40;
+  color:#000;
 /* text-decoration: underline; */
 /* font-weight: bold; */
 }
 
 .trucks-list-scroll {
     max-height: 30vh;
-    background-color: #aaa;
+    background-color: #aaaaaa;
     overflow-y: scroll;
     /* border-bottom: 1px solid #e0e0e0; */
 }

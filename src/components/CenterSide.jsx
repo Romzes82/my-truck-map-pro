@@ -180,7 +180,8 @@ const CenterSide = (props) => {
                     } else {
                         li.innerText =
                             '- ' + data[i]['id'] + ') ' + data[i]['address'];
-                        li.title = data[i]['info'];
+                        // li.title = data[i]['info'];
+                        li.title = data[i]['info'].replace(/<br>/g, ' '); //перенос строки т.к. в tittle в li не сработает <br>
                         listRight[0].appendChild(li);
                         listRight[0].appendChild(hr);
                         varForBalloonContentBodyAndHintContent =

@@ -11,7 +11,8 @@ function App() {
         const handleMessage = (event) => {
             // Важно: проверяем origin отправителя!
 
-            if (event.origin !== 'http://localhost:3000') return;
+            // if (event.origin !== 'http://localhost:3000') return;
+            if (event.origin !== `http://${window.location.hostname}:3000`) return;
 
             if (event.data?.type === 'UPDATE_TRUCK_MAP_DATA') {
                 console.log('Получены данные:', event.data.payload);
